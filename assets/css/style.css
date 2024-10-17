@@ -319,6 +319,7 @@ button {
 @media screen and (max-width: 834px) {
   .l-footer__contact {
     justify-content: center;
+    align-items: center;
     padding: 6.125rem 0 7.5rem;
     position: relative;
   }
@@ -824,7 +825,7 @@ button {
   }
 }
 .p-idx-mv__nav {
-  padding-top: 3.75rem;
+  padding-top: 5.625rem;
   margin-left: auto;
   display: flex;
   flex-direction: column;

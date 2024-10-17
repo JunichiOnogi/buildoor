@@ -38,6 +38,7 @@
         }
         @include m.mq(md,max){
             justify-content: center;
+            align-items: center;
             padding:f.rem(98) 0 f.rem(120);
             position: relative;
         }
