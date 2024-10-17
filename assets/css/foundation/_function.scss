@@ -1,0 +1,27 @@
+@use "sass:math";
+
+// pxをremに変換
+@function rem($px, $basepx: 16) {
+    @return math.div($px, $basepx) * 1rem;
+}
+
+//MediaQuery 
+$mq-breakpoints: (
+    'sm': 391,
+    'md': 835,
+    'lg': 1281,
+    'xl': 1441,
+) !default;
+
+// pxをvwに変換
+@function vpx($breakpoint, $px) {
+    $breakpoint: map-get($mq-breakpoints, $breakpoint);
+    @return 100vw * math.div($px, $breakpoint);
+}
+
+// pxを%に変換
+@function responsive($breakpoint, $px) {
+    $breakpoint: map-get($mq-breakpoints, $breakpoint);
+    @return 100% * math.div($px, $breakpoint);
+}
+

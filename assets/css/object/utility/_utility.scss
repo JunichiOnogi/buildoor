@@ -1,0 +1,95 @@
+//命名規則
+//.u-[Emmetのプロパティ＋値]
+//.u-[Emmetのプロパティ＋値]-[ブレイクポイント]-[min or max]
+@use "../../foundation/_mixin" as m;
+@use "../../foundation/_color" as c;
+
+.u-hover-line{
+  @include m.hover-line();
+}
+
+//テキスト横スクロール
+@keyframes scrolltext {
+  0% {
+      transform:translate(0%, 0%)
+  }
+  100% {
+      transform:translate(-50%, 0%)
+  }
+}
+
+//回転
+@keyframes rotation{
+	0%{ transform:rotate(0);}
+	100%{ transform:rotate(360deg); }
+}
+
+//円
+@keyframes circle {
+  to {
+    stroke-dashoffset: 0;
+  }
+  from {
+    stroke-dashoffset: 1362;
+  }
+}
+
+// PC↑非表示
+.u-dn-lg-min {
+  @include m.mq(lg,min) {
+      display: none;
+  }
+}
+
+// PC時非表示
+.u-dn-lg-max {
+  @include m.mq(lg, max) {
+      display: none;
+  }
+}
+
+.js-parallax{ overflow: hidden;}
+
+// TB↑非表示
+.u-dn-md-min {
+  @include m.mq(md, min) {
+      display: none;
+  }
+}
+
+// TB時非表示
+.u-dn-md-max {
+  @include m.mq(md, max) {
+      display: none;
+  }
+}
+
+// SP↑非表示
+.u-dn-sm-min {
+  @include m.mq(sm,min) {
+      display: none;
+  }
+}
+
+// sp時非表示
+.u-dn-sm-max {
+  @include m.mq(sm, max) {
+      display: none;
+  }
+}
+
+.u-uline{
+  border-bottom: 1px solid;
+}
+
+.u-clr--accent{color:c.$c-accent;}
+
+.u-dn{ display: none;}
+
+.u-ta-right{ text-align: right;}
+.u-ta-center{ text-align: center;}
+
+.u-mt-0{ margin-top:0!important;}
+.u-mb-0{ margin-bottom: 0!important;}
+.u-pt-0{ padding-top:0!important;}
+.u-pb-0{ padding-bottom: 0!important;}

@@ -1,0 +1,63 @@
+
+@use "../../foundation/_color" as c;
+@use "../../foundation/_mixin" as m;
+@use "../../foundation/_function" as f;
+@use "../../foundation/_font" as fo;
+
+.c-ttl{
+    font-family: fo.$fontAnton;
+    font-size: f.rem(48);
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.c-subttl{
+    font-size: f.rem(25);
+    font-weight: 500;
+    line-height: 1.7;
+    @include m.mq(md,min){
+        &.--sizel{
+            font-size: f.rem(32);
+            line-height: 1.65;
+            font-weight: 500;
+        }
+    }
+    @include m.mq(md,max){
+        font-size: f.rem(21);
+        line-height: 1.75;
+        &.--sizel,
+        &.--splarge{
+            font-size: f.rem(25);
+        }
+        &.--spsmall{
+            font-size: f.rem(18);
+        }
+    }
+}
+
+.c-txt{
+    font-size: f.rem(16);
+    line-height: 1.9;
+}
+
+.c-txtlink{
+    display: inline-flex;
+    align-items: center;
+    gap:f.rem(10);
+    &::after{
+        display: block;
+        content:"";
+        width:f.rem(8);
+        aspect-ratio: 1;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        transition: background .35s ease-out;
+        background-color: c.$c-base;
+    }
+    &:hover{
+        transition: color .35s ease-out;
+        color:c.$c-accent;
+        &::after{
+            background-color: c.$c-accent;
+        }
+    }
+}

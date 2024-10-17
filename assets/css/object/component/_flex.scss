@@ -1,0 +1,12 @@
+
+.c-flex{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &-j-center{
+      justify-content: center;
+  }
+  &-a-center{
+      align-items: center;
+  }
+}

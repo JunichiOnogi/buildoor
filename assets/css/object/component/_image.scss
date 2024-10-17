@@ -1,0 +1,31 @@
+
+@use "../../foundation/_color" as c;
+@use "../../foundation/_mixin" as m;
+@use "../../foundation/_function" as f;
+
+.c-image{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    &.--rightend{
+        object-position: right bottom;
+    }
+}
+
+.hover{
+    display: block;
+    overflow: hidden;
+    figure{
+        display: block;
+        overflow: hidden;    
+    }
+    img{
+        will-change: transform;
+        transition: transform 0.8s cubic-bezier(0.485, 0.135, 0, 0.995) 0s;
+    }
+    &:hover{
+        img{
+            transform:scale(1.2);
+        }
+    }
+}

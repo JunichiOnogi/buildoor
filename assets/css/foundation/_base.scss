@@ -1,0 +1,73 @@
+@use "./_font" as fo;
+@use "./_color" as c;
+@use "./_function" as f;
+@use "./_mixin" as m;
+
+*, *:before, *:after {
+box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+	@include m.mq(xl,max){
+		font-size: f.vpx(xl,16);
+	}
+	@include m.mq(md,max){
+		font-size: f.vpx(md,20);
+	}
+	@include m.mq(sm,max){
+		font-size: f.vpx(sm,16);
+	}
+}
+
+body {
+	font-size: f.rem(14);
+	line-height: 1.4;
+	font-weight: 400;
+	color:c.$c-base;
+	font-family: fo.$fontGothic;
+	background-color: c.$c-gray;
+	&.preload * {
+		transition: 0s !important;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+  &.opacity{
+    transition: opacity .2s ease-out;
+    &:hover{
+      opacity:.5;
+    }
+  }
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+input {
+	margin: 0;
+	padding: 0;
+}
+
+textarea {
+	padding: 0;
+	font: inherit;
+	color: inherit;  
+}
+
+button {
+	font: inherit;  
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	color: inherit;  
+	cursor: pointer;
+}

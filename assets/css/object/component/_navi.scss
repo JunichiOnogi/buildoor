@@ -1,0 +1,38 @@
+@use "../../foundation/_color" as c;
+@use "../../foundation/_function" as f;
+@use "../../foundation/_mixin" as m;
+@use "../../foundation/_font" as fo;
+//命名規則
+//.c-[コンポーネント名]
+//.c-[コンポーネント名]-[ユニーク名]
+//.c-[コンポーネント名＋連番]
+
+.c-navi{
+  display: inline-block;
+  font-family: fo.$fontEn;
+  font-weight: 500;
+  font-size: f.rem(18);
+  overflow: hidden;
+  position: relative;
+  line-height: 1;
+  @include m.mq(md,max){
+    font-size: f.rem(28);
+  }
+  span{
+    display: inline-block;
+    color:c.$c-base;
+    transition:color .4s ease-out;
+    &:nth-child(2){
+      position: absolute;
+      left: 0;
+      top:100%;
+    }
+  }
+  &:hover{
+    span{
+      color:c.$c-accent;
+      translate:0 -100%;
+      transition:translate .3s ease-out,color .4s ease-out;
+    }
+  }
+}
