@@ -218,7 +218,12 @@ gsap.to(".p-idx-srv__voice", {
 ScrollTrigger.create({
     trigger: '.p-idx-about',
     start: 'top top',
-    toggleClass: { targets: 'body', className: "is-scroll"},
+    onEnter: () => {
+        document.body.classList.add("is-scroll");
+    },
+    onLeaveBack: () => {
+        document.body.classList.remove("is-scroll");
+    },
     //markers: true,
 });
 

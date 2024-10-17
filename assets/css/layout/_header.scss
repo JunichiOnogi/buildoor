@@ -81,6 +81,7 @@
             border-radius:f.rem(20);
             background-color: rgba(#fff,40%);
             backdrop-filter: blur(f.rem(4));
+            -webkit-backdrop-filter: blur(f.rem(4));
             position: fixed;
             right:f.rem(12);
             top:f.rem(12);
