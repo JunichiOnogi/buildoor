@@ -1443,7 +1443,7 @@ button {
 @media screen and (max-width: 834px) {
   .p-idx-srv__voice:nth-child(even)::before {
     width: 1.375rem;
-    right: calc(-1.375rem - 2px);
+    right: calc(-1.25rem - 2px);
   }
 }
 .p-idx-srv__voice:nth-child(even)::after {
@@ -1460,7 +1460,7 @@ button {
 @media screen and (max-width: 834px) {
   .p-idx-srv__voice:nth-child(even)::after {
     width: calc(1.375rem - 2px);
-    right: calc(-1.375rem + 4px);
+    right: calc(-1.25rem + 4px);
   }
 }
 .p-idx-srv__voice span {

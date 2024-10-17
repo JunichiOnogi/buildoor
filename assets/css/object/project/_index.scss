@@ -114,10 +114,16 @@
         padding-bottom: f.rem(8);
         position: relative;
         z-index: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
         .swiper-wrapper{
             transition-timing-function: linear !important;
         }
         &-slide{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
             width:f.rem(377);
             margin-inline:f.rem(5);
             @include m.mq(md,max){
@@ -596,7 +602,7 @@
                 clip-path: polygon(0 30%, 0% 100%, 100% 100%);
                 @include m.mq(md,max){
                     width:f.rem(22);
-                    right:calc(f.rem(-22) - 2px);
+                    right:calc(f.rem(-20) - 2px);
                 }
             }
             &::after {
@@ -611,7 +617,7 @@
                 clip-path: polygon(0 30%, 0% 100%, 100% 100%);
                 @include m.mq(md,max){
                     width:calc(f.rem(22) - 2px);
-                    right:calc(f.rem(-22) + 4px);
+                    right:calc(f.rem(-20) + 4px);
                 }
             }
         }
