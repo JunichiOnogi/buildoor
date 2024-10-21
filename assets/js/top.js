@@ -37,7 +37,6 @@ function loadedPage(){
 		ease: "power1.inOut",
 		onComplete: () => {
 			document.querySelector('.l-loading').remove();
-			return_scroll();
 			fv_start();
 		}
 	});
@@ -54,6 +53,7 @@ function fv_start(){
 		duration:.8,
 		x:0,
 		opacity:1,
+		delay:.1,
 		ease: "power1.inOut",
 	}, "-=.2");
 	tl2.to('.p-idx-mv__clm-txt',{
@@ -69,20 +69,18 @@ function fv_start(){
 	}, "-=.2");
 }
 
-loadedPage();
-
-/*
 if (!localStorage.getItem('visited')) {
 	localStorage.setItem('visited', 'first');
 	window.addEventListener('load', function () {
 		loadedPage();
 	});
 }else {
-	document.querySelector('.l-loading').remove();
-	initSwiper();
-	fv_start();
+	window.addEventListener('load', function () {
+		document.querySelector('.l-loading').remove();
+		initSwiper();
+		fv_start();
+	});
 }
-*/
 
 gsap.to(".p-idx-srv__bgtxt", {
 	y: -1500,
