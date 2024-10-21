@@ -889,11 +889,17 @@ button {
   padding-bottom: 0.5rem;
   position: relative;
   z-index: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .p-idx-mv__swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
 .p-idx-mv__swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   width: 23.5625rem;
   margin-inline: 0.3125rem;
 }
@@ -1381,8 +1387,8 @@ button {
 }
 @media screen and (max-width: 834px) {
   .p-idx-srv__voice {
-    max-width: 96%;
-    padding: 1.25rem 1.625rem;
+    max-width: 98%;
+    padding: 1.25rem;
     font-size: 1rem;
   }
 }

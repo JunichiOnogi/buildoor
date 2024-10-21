@@ -543,8 +543,8 @@
         opacity:0;
         position: relative;
         @include m.mq(md,max){
-            max-width:96%;
-            padding:f.rem(20) f.rem(26);
+            max-width:98%;
+            padding:f.rem(20);
             font-size: f.rem(16);
         }
         & + &{
